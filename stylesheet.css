@@ -1,0 +1,183 @@
+:root {
+    --boxH: 100vh;
+    --boxW: 100vw;
+    --newblue: #369fff;
+    --eigengrau: #16161;
+    --midnightBlue: #191970;
+    --coolGrey: #E4E5E8;
+    --gunmetalGrey: #53565A;
+    --burgandy: #4D0011;
+    --oliveGrey: #4B443C;
+    --gold: #FFD700;
+  }
+  
+  body {
+    background-color: #16161D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 8vh;
+    align-self: flex-end;
+    padding-right: 2vw;
+  }
+  
+  h2 {
+    font-size: 4vh;
+  }
+  
+  h1, h2, h5{
+    margin: 1vh 0;
+  }
+  
+  .container {
+    width: calc(var(--boxW) * .5);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .holder {
+    height: 100vh;
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .img-holder {
+    height: calc(var(--boxH) * .5);
+    width: calc(var(--boxW) * .0);
+    opacity: 0;
+    transition: 500ms .5s ease-out;
+  }
+  
+  .box {
+    background-color: var(--gold);
+    height: 40vh;
+    width: 25vw;
+    border-radius: 15px;
+    box-shadow: 1vw 2vh crimson;
+  }
+  
+  /* about-me section */
+  
+  #about-me {
+    background-color: var(--eigengrau);
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #about-img-holder {
+    background-color: var(--gold);
+    display: flex;
+    transition: 1.5s ease-in-out;
+  }
+  
+  #about-me-info {
+    width: 83vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateY(115vh);
+    transition: 1s 1s ease;
+    visibility: hidden;
+  }
+  
+  #about-me-holder {
+    width: 45vw;
+    display: flex;
+    align-self: center;
+  }
+  
+  #info-box-left {
+    align-self: flex-end;
+  }
+  
+  #info-box-right {
+    align-self: flex-start;
+  }
+  
+  #lion-logo {
+    transition: 1.5s cubic-bezier(.36,.48,.83,.36);
+    transform: scale(200%) translateY(-3vh);  
+  }
+  
+  #logo-line {
+    fill: var(--eigengrau);
+    z-index: 1;
+  }
+  
+  #about-text-holder {
+    background-color: transparent;
+    color: var(--coolGrey);
+    transition: 850ms ease-in-out;
+  }
+  
+  #about-me:hover > #about-img-holder {
+    transform: translateX(84vw);
+    width: 10vw;
+  }
+  
+  #about-me:hover > #about-img-holder #lion-logo {
+    transform: rotateY(180deg) translate(1vw, 30vh);
+  }
+  
+  #about-me:hover > #about-text-holder {
+    opacity: 0;
+  }
+  
+  #about-me:hover > #about-me-info {
+    visibility: visible;
+    transform: translateY(15vh);
+  }
+  
+  #about-me:hover > #about-me-info .img-holder {
+    opacity: 1;
+  }
+  
+  /* navbar section */
+  
+  section {
+    background-color: whitesmoke;
+    height: var(--boxH);
+    width: var(--boxW);
+  }
+  
+  #navbar{
+    background: var(--geisengrau);
+    height: 12vh;
+    display: block;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  
+  
+  
+  #projects, #prev-projects {
+    background-color: var(--gunmetalGrey);
+  }
+  
+  #footer {
+    background-color: var(--burgandy);
+  }
+  
+  #social-media {
+    background-color: var(--midnightBlue);
+  }
+  
+  
+  
+  
